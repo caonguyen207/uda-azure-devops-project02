@@ -26,7 +26,7 @@ stages:
         python3.9 -m pip install setup
         python3.9 -m pip install -r requirements.txt
       workingDirectory: $(projectRoot)
-      displaName: 'Upgrade and install python packages'
+      displayName: 'Upgrade and install python packages'
     
     - script: |
         export PATH=$HOME/.local/bin:$PATH
