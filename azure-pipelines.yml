@@ -12,7 +12,8 @@ variables:
   webAppName: nguyenlc1-project2
   projectRoot: $(System.DefaultWorkingDirectory)
   azureServiceConnectionId: 'nguyenlc1-project2'
-  environmentName: 'Development'
+  environmentName: 'Flask'
+  pythonVersion: '3.9'
 
 stages:
 - stage: Build
@@ -21,10 +22,14 @@ stages:
   - job: BuildJob
     pool: mypool
     steps:
+    - task: UsePythonVersion@0
+       inputs:
+        versionSpec: '$(pythonVersion)'
+        displayName: 'Use Python $(pythonVersion)'
     - script: |
-        python3.9 -m pip install --upgrade pip
-        python3.9 -m pip install setup
-        python3.9 -m pip install -r requirements.txt
+        python -m pip install --upgrade pip
+        python -m pip install setup
+        python -m pip install -r requirements.txt
       workingDirectory: $(projectRoot)
       displayName: 'Upgrade and install python packages'
     
@@ -66,6 +71,10 @@ stages:
       runOnce:
         deploy:
           steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '$(pythonVersion)'
+            displayName: 'Use Python version'
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App'
             inputs:
