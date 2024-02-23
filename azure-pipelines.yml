@@ -23,9 +23,9 @@ stages:
     pool: mypool
     steps:
     - task: UsePythonVersion@0
-       inputs:
+      inputs:
         versionSpec: '$(pythonVersion)'
-        displayName: 'Use Python $(pythonVersion)'
+      displayName: 'Use Python $(pythonVersion)'
     - script: |
         python -m pip install --upgrade pip
         python -m pip install setup
