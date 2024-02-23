@@ -11,7 +11,8 @@ pool: mypool
 variables:
   webAppName: nguyenlc1-project2
   projectRoot: $(System.DefaultWorkingDirectory)
-  azureServiceConnectionId: nguyenlc1-project2
+  azureServiceConnectionId: 'nguyenlc1-project2'
+  environmentName: 'Development'
 
 stages:
 - stage: Build
@@ -19,8 +20,8 @@ stages:
   jobs:
   - job: BuildJob
     pool: mypool
+    environment: $(environmentName)
     steps:
-
     - script: |
         python3.9 -m pip install --upgrade pip
         python3.9 -m pip install setup
