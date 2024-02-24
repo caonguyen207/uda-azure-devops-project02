@@ -140,7 +140,7 @@ sudo ./svc.sh start
 
 ![Setup Agent](screenshots/setup-agent4.PNG)
 9. Back to project page and add new environment named `Flask`
-10. User service principal information and create new service connection with named `guyenlc1-project2`, remember to grant full access.
+10. User service principal information and create new service connection with named `nguyenlc1-project2`, remember to grant full access.
 11. Make the change and push the change to your Repo.
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`

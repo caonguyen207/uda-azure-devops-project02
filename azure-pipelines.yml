@@ -9,6 +9,7 @@ trigger:
 pool: mypool
 
 variables:
+  system.debug: 'true'
   webAppName: nguyenlc1-project2
   projectRoot: $(System.DefaultWorkingDirectory)
   azureServiceConnectionId: 'nguyenlc1-project2'
