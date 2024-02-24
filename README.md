@@ -17,6 +17,7 @@ By this repository, you will learn how to use Azure pipeline to deploy sample Ma
 
 ![Cloud Shell Setup](./screenshots/cloud-shell-setup.PNG)
 2. Follow instruction at [adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and add public key to your Git Hub Account.
+
 3. Clone the repo into Cloud Shell use SSH URL.
 
 ![git Clone](screenshots/git-clone-01.png)
@@ -56,9 +57,11 @@ pip install --upgrade pip && pip install -r requirements.txt
 9. Start `locust` in your local environment by running command: `locust -f locustfile.py --host=https://nguyenlc1-project2.azurewebsites.net`. The result should be as below.
 
 ![Locust Starting](screenshots/start-locust.PNG)
+
 10. Open another terminal, navigate to repo folder and run:  `sh make_predict_azure_app.sh`. The result should be as below.
 
 ![Run Predict in local](screenshots/run-predict-in-locahost.PNG)
+
 11. Open browser and paste: `http://localhost:8089/?tab=stats`, it should display testing result as below:
 
 ![Locust Test Result](screenshots/locust-test-result.PNG)
@@ -125,7 +128,7 @@ tar zxvf ../vsts-agent-linux-x64-2.202.1.tar.gz
 * Agent pool: `mypool`
 * Keep as default for other configuration.
 
-![Setup Agent](screenshots/setup-agent2.PNG)
+![Setup Agent](screenshots/setup-agent2.png)
 
 * Run the following commands to finish the set up.
 
@@ -139,7 +142,8 @@ sudo ./svc.sh start
 * Verify agent status in "Agent Pool"
 
 ![Setup Agent](screenshots/setup-agent4.PNG)
-9. Back to project page and add new environment named `Flask`
+
+9. Back to project page and add new environment named `Flask`.
 10. User service principal information and create new service connection with named `nguyenlc1-project2`, remember to grant full access.
 11. Make the change and push the change to your Repo.
 
