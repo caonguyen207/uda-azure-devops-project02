@@ -1,3 +1,5 @@
+[![Python application test with GitHub Actions](https://github.com/caonguyen207/uda-azure-devops-project02/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/caonguyen207/uda-azure-devops-project02/actions/workflows/python-app.yml)
+
 # Overview
 
 By this repository, you will learn how to use Azure pipeline to deploy sample Machine Learning application in Azure App Service. The architecture can be found by below image:
@@ -17,7 +19,6 @@ By this repository, you will learn how to use Azure pipeline to deploy sample Ma
 
 ![Cloud Shell Setup](./screenshots/cloud-shell-setup.PNG)
 2. Follow instruction at [adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and add public key to your Git Hub Account.
-
 3. Clone the repo into Cloud Shell use SSH URL.
 
 ![git Clone](screenshots/git-clone-01.png)
@@ -161,6 +162,4 @@ sudo ./svc.sh start
 
 ## Demo
 
-[My Demo]()
-
-[![Python application test with GitHub Actions](https://github.com/caonguyen207/uda-azure-devops-project02/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/caonguyen207/uda-azure-devops-project02/actions/workflows/python-app.yml)
+[My Demo](https://youtu.be/pwqhyhGGiWY)
